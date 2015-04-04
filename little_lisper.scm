@@ -11,8 +11,9 @@
   (lambda (l)
     (cond
      ((null? l) #t)
+     ((atom? l))
      ((atom? (car l)) (lat? (cdr l)))
-      (#t nil))))
+      (#t #f))))
 
 (define member?
   (lambda (a lat)
