@@ -9,8 +9,8 @@
   (lambda (l)
     (cond
      ((null? l) #t)
-     ((atom? (car l) #t)
-      (t nil)))))
+     ((atom? (car l)) (lat? (cdr l)))
+      (#t nil))))
 
 (define member?
   (lambda (a lat)
