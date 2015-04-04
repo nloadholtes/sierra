@@ -1,7 +1,12 @@
 ; Code from "The Little LISPer"
 
+;; Definitions
+(define x (list 1 2 3 4)) ;; For testing
+
+;;TODO: Define atom
+
 ;; Chapter 2
-(define (lat? l)
+(define lat?
   (lambda (l)
     (cond
      ((null? l) t)
