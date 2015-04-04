@@ -1,4 +1,6 @@
 ; Code from "The Little LISPer"
+(define (is-5? n)
+  (= n 5))
 
 ;; Definitions to work with scheme
 (define x '(1 2 3 4)) ;; For testing
@@ -21,5 +23,10 @@
 	 (member? a (cdr lat)))))))
 
 ;; Chapter 3
-(define (is-5? n)
-  (= n 5))
+(define rember
+  (lambda (a lat)
+    (cond
+      ((null? lat) '())
+      ((eq? (car lat) a) (cdr lat))
+      (#t (cons (car lat)
+                (rember a (cdr lat)))))))
