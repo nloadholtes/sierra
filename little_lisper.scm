@@ -16,3 +16,4 @@
 	 (eq? (car lat) a)
 	 (member? a (cdr lat)))))))
 
+;; Chapter 3
