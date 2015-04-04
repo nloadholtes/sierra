@@ -1,16 +1,17 @@
 ; Code from "The Little LISPer"
 
-;; Definitions
+;; Definitions to work with scheme
 (define x (list 1 2 3 4)) ;; For testing
-
-;;TODO: Define atom
+(define atom? (let ((f1 pair?) (f2 not)) (lambda (x) (f2 (f1 x)))))
+;;(define t #t)
+;;(define f #f)
 
 ;; Chapter 2
 (define lat?
   (lambda (l)
     (cond
      ((null? l) t)
-     ((atom? (car l) t)
+     (((atom? (car l)) t)
       (t nil)))))
 
 (define member?
