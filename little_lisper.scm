@@ -8,8 +8,8 @@
 (define lat?
   (lambda (l)
     (cond
-     ((null? l) t)
-     ((atom? (car l) t)
+     ((null? l) #t)
+     ((atom? (car l) #t)
       (t nil)))))
 
 (define member?
