@@ -36,5 +36,5 @@
   (lambda (l)
     (cond
       ((null? l) '())
-      (#t (cons (car car l))
-          (firsts (cdr l))))))
+      (#t (cons (car (car l))
+          (firsts (cdr l)))))))
