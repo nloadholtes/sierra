@@ -31,3 +31,10 @@
       ((eq? (car lat) a) (cdr lat))
       (#t (cons (car lat)
                 (rember a (cdr lat)))))))
+
+(define firsts
+  (lambda (l)
+    (cond
+      ((null? l) '())
+      (#t (cons (car car l))
+          (firsts (cdr l))))))
