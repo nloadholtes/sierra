@@ -1,7 +1,7 @@
-FROM debian:jessie
+FROM slogsdon/racket
 MAINTAINER Nick Loadholtes <nick@ironboundsoftware.com>
 
-RUN apt-get update && apt-get install -y \
-    racket
+WORKDIR /src/app
+ADD . /src/app
 
 ENTRYPOINT ["/usr/bin/racket"]
