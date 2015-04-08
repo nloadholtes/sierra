@@ -38,3 +38,15 @@
       ((null? l) '())
       (#t (cons (car (car l))
           (firsts (cdr l)))))))
+
+(define insertR
+  (lambda (new old lat)
+    (cond
+      ((null? lat) '())
+      (#t (cond
+            ((eq? (car lat) old)
+             (cons old
+                   (cons new (cdr lat))))
+            (#t (cons (car lat)
+                      (insertR
+                       new old (cdr lat)))))))))
