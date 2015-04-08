@@ -50,3 +50,14 @@
             (#t (cons (car lat)
                       (insertR
                        new old (cdr lat)))))))))
+
+(define substr
+  (lambda (new old lat)
+    (cond
+      ((null? lat> '()))
+      (#t (cond
+            ((eq? (car lat) old)
+             (cons new (cdr lat)))
+            (#t (cons (car lat)
+                      (subst
+                       new old (cdr lat)))))))))
